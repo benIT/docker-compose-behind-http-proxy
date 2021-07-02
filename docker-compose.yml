@@ -1,0 +1,14 @@
+version: '3'
+services:
+  debian:
+    build:
+      context: docker/debian
+      args:
+        - http_proxy
+        - https_proxy
+        - no_proxy
+    environment:
+      - TZ=Europe/Paris
+      - http_proxy
+      - https_proxy
+      - no_proxy
