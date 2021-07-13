@@ -8,4 +8,6 @@ RUN update-ca-certificates
 RUN echo "################################testing a curl HTTP request###########################################"
 RUN curl -s http://example.com/ > /dev/null
 RUN echo "################################testing a curl HTTPS request###########################################"
+#curl 7.52.1: KO
+RUN curl --version
 RUN curl https://example.com/ > /dev/null
